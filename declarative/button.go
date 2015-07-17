@@ -36,3 +36,12 @@ type Button struct {
 	//OnCheckedChanged    walk.EventHandler
 	//OnCheckStateChanged walk.EventHandler
 }
+
+func (b Button) Create(window *MainWindow) {
+	win := *window.AssignTo
+	w := gowi.NewButton(win, b.ID)
+	if b.AssignTo != nil {
+		*b.AssignTo = w
+	}
+	w.OnClicked = b.OnClicked
+}

@@ -16,7 +16,7 @@ func (this *MainWindow) Create() {
 	w.Create(this.ID)
 	*this.AssignTo = w
 
-	//for _, c := range this.Controls {
-
-	//}
+	for _, c := range this.Controls {
+		c.Create(this)
+	}
 }

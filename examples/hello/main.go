@@ -26,13 +26,12 @@ func main() {
 				ID:1001,
 				OnClicked:func() {
 					fmt.Println("Button clicked.")
-					mw.SetWindowText("Clicked")
 				},
 			},
 		},
 	}
 	m.Create()
 
-	mw.SetWindowText("aaaaa")
+	mw.SetWindowText("Hello!")
 	engine.Run()
 }
