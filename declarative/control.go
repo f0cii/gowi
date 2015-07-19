@@ -1,5 +1,5 @@
 package declarative
 
-type Widget interface {
+type Control interface {
 	Create(window *MainWindow)
 }

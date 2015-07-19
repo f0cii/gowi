@@ -9,7 +9,7 @@ import (
 )
 
 import (
-	"github.com/lxn/win"
+	"github.com/nvsoft/win"
 )
 
 // Icon is a bitmap that supports transparency and combining multiple
@@ -60,7 +60,7 @@ func NewIconFromFile(filePath string) (*Icon, error) {
 		win.IMAGE_ICON,
 		0,
 		0,
-			win.LR_DEFAULTSIZE|win.LR_LOADFROMFILE))
+		win.LR_DEFAULTSIZE|win.LR_LOADFROMFILE))
 	if hIcon == 0 {
 		return nil, errors.New("LoadImage")
 	}

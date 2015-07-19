@@ -4,40 +4,41 @@ Gui for golang, UI created by ResEdit
 # Code
 
 import (
-	"github.com/nvsoft/gowi"
-	. "github.com/nvsoft/gowi/declarative"
-	"fmt"
+    "github.com/nvsoft/gowi"
+    . "github.com/nvsoft/gowi/declarative"
+    "fmt"
 )
 
 type MyMainWindow struct {
-	*gowi.MainWindow
-	label1 *gowi.Label
-	button1 *gowi.Button
+    *gowi.MainWindow
+    label1 *gowi.Label
+    button1 *gowi.Button
 }
 
 func main() {
-	engine := gowi.New()
+    app := gowi.New()
 
-	mw := new(MyMainWindow)
+    mw := new(MyMainWindow)
 
-	m := MainWindow{
-		AssignTo:&mw.MainWindow,
-		ID:1000,
-		Controls:[]Widget{
-			Button{
-				AssignTo:&mw.button1,
-				ID:1001,
-				OnClicked:func() {
-					fmt.Println("Button clicked.")
-					mw.SetWindowText("Clicked")
-				},
-			},
-		},
-	}
-	m.Create()
+    m := MainWindow{
+        AssignTo:&mw.MainWindow,
+        ID:1000,
+        Controls:[]Control{
+            Button{
+                AssignTo:&mw.button1,
+                ID:1001,
+                OnClicked:func() {
+                    fmt.Println("Button clicked.")
+                    mw.SetWindowText("Clicked")
+                },
+            },
+        },
+    }
+    m.Create()
+    m.Show()
 
-	mw.SetWindowText("aaaaa")
-	engine.Run()
+    mw.SetWindowText("Hello")
+    app.Run()
 }
 
 # Screenshots

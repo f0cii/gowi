@@ -6,9 +6,9 @@ import (
 )
 
 type Button struct {
-	WidgetBase
+	WindowBase
 	OnClicked func()
-	Clicked *gosig.Signal
+	Clicked   *gosig.Signal
 }
 
 func (w *Button) WndProc(msg uint32, wparam, lparam uintptr) uintptr {
@@ -17,14 +17,14 @@ func (w *Button) WndProc(msg uint32, wparam, lparam uintptr) uintptr {
 	return 0
 }
 
-func NewButton(window Window, id uintptr) *Button {
+func NewButton(window MainWindow, id uintptr) *Button {
 	c := new(Button)
-	c.InitWidget(window, id)
+	c.InitWindow(window, id)
 
 	//c.Clicked, _ = gosig.NewSignal(func() {})
-	c.Clicked, _ = gosig.NewSignal(func(){})
+	c.Clicked, _ = gosig.NewSignal(func() {})
 	//window.Connect(b1.Clicked, w.OnButton1Clicked)
-	c.Clicked.Connect(func(){
+	c.Clicked.Connect(func() {
 		if c.OnClicked != nil {
 			c.OnClicked()
 		}

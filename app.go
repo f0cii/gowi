@@ -11,11 +11,11 @@ func GetAppInstance() win.HINSTANCE {
 	return hInst
 }
 
-type Engine struct {
+type Application struct {
 }
 
 // 运行主消息循环
-func (e *Engine) Run() int {
+func (e *Application) Run() int {
 	var msg win.MSG
 
 	for {
@@ -33,7 +33,7 @@ func (e *Engine) Run() int {
 	return 0
 }
 
-func New() *Engine {
-	engine := new(Engine)
-	return engine
+func New() *Application {
+	app := new(Application)
+	return app
 }

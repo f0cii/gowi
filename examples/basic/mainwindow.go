@@ -9,7 +9,7 @@ import (
 type MainWindow struct {
 	gowi.MainWindow
 	button1 *gowi.Button
-	label1 *gowi.Label
+	label1  *gowi.Label
 }
 
 // 创建主窗口实例
@@ -41,4 +41,3 @@ func (w *MainWindow) OnButton1Clicked() {
 		w.button1.SetWindowText("开始")
 	}
 }
-

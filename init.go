@@ -9,5 +9,5 @@ func init() {
 	if hInst == 0 {
 		panic("GetModuleHandle")
 	}
-	gWidgetRegistry = make(map[win.HWND]Widget)
+	gWindowRegistry = make(map[win.HWND]Window)
 }

@@ -4,18 +4,18 @@ import (
 	"github.com/nvsoft/win"
 )
 
-var gWidgetRegistry map[win.HWND]Widget
+var gWindowRegistry map[win.HWND]Window
 
-func RegMsgHandler(widget Widget) {
-	gWidgetRegistry[widget.Handle()] = widget
+func RegMsgHandler(window Window) {
+	gWindowRegistry[window.Handle()] = window
 }
 
 func UnRegMsgHandler(hwnd win.HWND) {
-	delete(gWidgetRegistry, hwnd)
+	delete(gWindowRegistry, hwnd)
 }
 
-func GetMsgHandler(hwnd win.HWND) Widget {
-	if widget, isExists := gWidgetRegistry[hwnd]; isExists {
+func GetMsgHandler(hwnd win.HWND) Window {
+	if widget, isExists := gWindowRegistry[hwnd]; isExists {
 		return widget
 	}
 
