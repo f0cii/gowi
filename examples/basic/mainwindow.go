@@ -18,8 +18,8 @@ func NewMainWindow() *MainWindow {
 
 	w.Create(IDD_MAIN)
 
-	b1 := gowi.NewButton(w, IDD_BUTTON1)
-	l1 := gowi.NewLabel(w, IDD_LABEL1)
+	b1 := gowi.NewButton(w.MainWindow, IDD_BUTTON1)
+	l1 := gowi.NewLabel(w.MainWindow, IDD_LABEL1)
 
 	b1.OnClicked = w.OnButton1Clicked
 
