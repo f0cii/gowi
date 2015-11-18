@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/nvsoft/gowi"
+	"github.com/lroc/gowi"
 )
 
 func main() {
@@ -11,7 +11,7 @@ func main() {
 	app := gowi.New()
 
 	w := NewMainWindow()
-	w.SetWindowText("Go程序示例")
+	w.SetWindowText("app example")
 	w.Show()
 
 	app.Run()

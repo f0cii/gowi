@@ -4,8 +4,8 @@ Gui for golang, UI created by ResEdit
 # Code
 
 import (
-    "github.com/nvsoft/gowi"
-    . "github.com/nvsoft/gowi/declarative"
+    "github.com/lroc/gowi"
+    . "github.com/lroc/gowi/declarative"
     "fmt"
 )
 
@@ -43,10 +43,10 @@ func main() {
 
 # Screenshots
 
-设计：
+How to design：
 
-![ResEdit](https://raw.githubusercontent.com/nvsoft/gowi/master/doc/resedit.png)
+![ResEdit](https://raw.githubusercontent.com/lroc/gowi/master/doc/resedit.png)
 
-运行：
+Run：
 
-![运行截图](https://raw.githubusercontent.com/nvsoft/gowi/master/doc/screenshot1.png)
+![Running screenshot](https://raw.githubusercontent.com/lroc/gowi/master/doc/screenshot1.png)

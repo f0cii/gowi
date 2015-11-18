@@ -2,7 +2,7 @@ package gowi
 
 import (
 	"fmt"
-	"github.com/nvsoft/win"
+	"github.com/lroc/win"
 	"syscall"
 	"unsafe"
 )
@@ -65,7 +65,7 @@ func (w *WindowBase) AsWindowBase() *WindowBase {
 	return w
 }
 
-// 设置窗口对应资源Idd
+// Set window resource Idd
 func (w *WindowBase) InitWindow(window MainWindow, id uintptr) {
 	w.idd = id
 	h := window.AsWindowBase().Handle()
@@ -78,10 +78,6 @@ func (w *WindowBase) Handle() win.HWND {
 	return w.hwnd
 }
 
-//func (w *WidgetBase) GetWindowText() string {
-//	return win.GetWindowText(w.hwnd)
-//}
-
 func (w *WindowBase) SetWindowText(title string) {
 	fmt.Printf("SetCaption hwnd: %v, %s\n", w.hwnd, title)
 	win.SetWindowText(w.hwnd, title)
@@ -93,14 +89,6 @@ func (w *WindowBase) GetWindowText() string {
 	win.SendMessage(w.hwnd, win.WM_GETTEXT, uintptr(textLength+1), uintptr(unsafe.Pointer(&buf[0])))
 	return syscall.UTF16ToString(buf)
 }
-
-//func (w *WidgetBase) SetWindowText(text string) {
-//	if win.TRUE != win.SendMessage(w.hwnd, win.WM_SETTEXT, 0, uintptr(unsafe.Pointer(syscall.StringToUTF16Ptr(text)))) {
-//return errors.New("WM_SETTEXT failed")
-//	}
-
-//return nil
-//}
 
 // IconType: 1 - ICON_BIG; 0 - ICON_SMALL
 func (w *WindowBase) SetIcon(iconType int, icon *Icon) {

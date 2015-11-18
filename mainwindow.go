@@ -3,21 +3,13 @@ package gowi
 import (
 	"fmt"
 	"github.com/CaryLorrk/gosig"
-	"github.com/nvsoft/win"
+	"github.com/lroc/win"
 	"syscall"
 )
 
 var defaultDialogProcPtr = syscall.NewCallback(defaultDialogProc)
 
-// 对话框接口
-//type Window interface {
-//	Widget
-
-//	AsWindowBase() *MainWindow
-//Show(parent win.HWND) int
-//}
-
-// 对话框类
+// Dialog class
 type MainWindow struct {
 	WindowBase
 }
@@ -26,13 +18,9 @@ func (w *MainWindow) AsWindowBase() *MainWindow {
 	return w
 }
 
-//func (w *DialogBase) Handle() win.HWND {
-//	return w.hwnd
-//}
-
 func (w *MainWindow) Create(idd uintptr) {
 	if idd == 0 {
-		panic("窗口未设置 Wid")
+		panic("Create MainWindow FAIL.")
 	}
 	w.idd = idd
 
@@ -41,11 +29,6 @@ func (w *MainWindow) Create(idd uintptr) {
 	if w.hwnd == win.HWND(0) {
 		fmt.Printf("Create window fail.[%v]\n", idd)
 	}
-	//icon, err := NewIconFromFile("main.ico")
-	//if err == nil {
-	//	w.SetIcon(0, icon)
-	//}
-	//w.Hide()
 }
 
 func (w *MainWindow) Connect(sig *gosig.Signal, slot interface{}) {

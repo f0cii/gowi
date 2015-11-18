@@ -1,12 +1,12 @@
 package gowi
 
 import (
-	"github.com/nvsoft/win"
+	"github.com/lroc/win"
 )
 
 var hInst win.HINSTANCE
 
-// 获取应用实例句柄
+// Get application instance handle
 func GetAppInstance() win.HINSTANCE {
 	return hInst
 }
@@ -14,7 +14,7 @@ func GetAppInstance() win.HINSTANCE {
 type Application struct {
 }
 
-// 运行主消息循环
+// Run the main message loop
 func (e *Application) Run() int {
 	var msg win.MSG
 

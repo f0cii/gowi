@@ -2,14 +2,11 @@ package gowi
 
 import (
 	"errors"
+	"github.com/lroc/win"
 	"image"
 	"path/filepath"
 	"syscall"
 	"unsafe"
-)
-
-import (
-	"github.com/nvsoft/win"
 )
 
 // Icon is a bitmap that supports transparency and combining multiple

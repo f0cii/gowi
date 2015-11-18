@@ -1,7 +1,7 @@
 package declarative
 
 import (
-	"github.com/nvsoft/gowi"
+	"github.com/lroc/gowi"
 )
 
 type LineEdit struct {

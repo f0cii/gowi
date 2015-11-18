@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/nvsoft/gowi"
-	. "github.com/nvsoft/gowi/declarative"
+	"github.com/lroc/gowi"
+	. "github.com/lroc/gowi/declarative"
 )
 
 type MyMainWindow struct {

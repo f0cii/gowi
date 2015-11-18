@@ -1,8 +1,8 @@
 package declarative
 
 import (
-	"github.com/nvsoft/gowi"
-	"github.com/nvsoft/win"
+	"github.com/lroc/gowi"
+	"github.com/lroc/win"
 )
 
 type MainWindow struct {
