@@ -4,8 +4,8 @@ Gui for golang, UI created by ResEdit
 # Code
 
 import (
-    "github.com/lroc/gowi"
-    . "github.com/lroc/gowi/declarative"
+    "github.com/sumorf/gowi"
+    . "github.com/sumorf/gowi/declarative"
     "fmt"
 )
 
@@ -45,8 +45,8 @@ func main() {
 
 How to design：
 
-![ResEdit](https://raw.githubusercontent.com/lroc/gowi/master/doc/resedit.png)
+![ResEdit](https://raw.githubusercontent.com/sumorf/gowi/master/doc/resedit.png)
 
 Run：
 
-![Running screenshot](https://raw.githubusercontent.com/lroc/gowi/master/doc/screenshot1.png)
+![Running screenshot](https://raw.githubusercontent.com/sumorf/gowi/master/doc/screenshot1.png)
