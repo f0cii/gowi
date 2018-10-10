@@ -1,11 +1,10 @@
 package declarative
 
 import (
-	"github.com/lroc/gowi"
+	"github.com/sumorf/gowi"
 )
 
 type ListViewHeader struct {
-
 }
 
 type ListView struct {

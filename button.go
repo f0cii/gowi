@@ -2,7 +2,8 @@ package gowi
 
 import (
 	"fmt"
-	"github.com/CaryLorrk/gosig"
+
+	"bitbucket.org/CaryLorrk/gosig"
 )
 
 type Button struct {

@@ -2,9 +2,10 @@ package gowi
 
 import (
 	"fmt"
-	"github.com/CaryLorrk/gosig"
-	"github.com/lroc/win"
 	"syscall"
+
+	"bitbucket.org/CaryLorrk/gosig"
+	"github.com/sumorf/win"
 )
 
 var defaultDialogProcPtr = syscall.NewCallback(defaultDialogProc)

@@ -2,9 +2,10 @@ package gowi
 
 import (
 	"fmt"
-	"github.com/lroc/win"
 	"syscall"
 	"unsafe"
+
+	"github.com/sumorf/win"
 )
 
 // Window

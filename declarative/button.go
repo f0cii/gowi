@@ -1,7 +1,7 @@
 package declarative
 
 import (
-	"github.com/lroc/gowi"
+	"github.com/sumorf/gowi"
 )
 
 type Button struct {

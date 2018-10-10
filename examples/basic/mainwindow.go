@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/lroc/gowi"
+
+	"github.com/sumorf/gowi"
 )
 
 type MainWindow struct {

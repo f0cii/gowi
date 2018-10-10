@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/lroc/gowi"
-	. "github.com/lroc/gowi/declarative"
+
+	"github.com/sumorf/gowi"
+	. "github.com/sumorf/gowi/declarative"
 )
 
 type MyMainWindow struct {

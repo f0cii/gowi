@@ -1,7 +1,7 @@
 package gowi
 
 import (
-	"github.com/lroc/win"
+	"github.com/sumorf/win"
 )
 
 var gWindowRegistry map[win.HWND]Window
